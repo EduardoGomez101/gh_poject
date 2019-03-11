@@ -13,14 +13,20 @@ if ($method == "POST"){
 		case 'que opinas de mi esposo eduardo':
 			$speech = "Que es un gran chico, y que desde hace tiempo, ha decidido y desea terminar su vida a tu lado. El te ama!";
 		break;
-		case 'bye':
-			$speech = "Bye, good night";
+		case 'lights on':
+			$speech = "Turning the lights on, now.";
+		break;
+		case 'Hey Google':
+			$speech = "Hi Eduardo, glad to hear you again.";
+		break;
+		case 'Lights off':
+			$speech = "Turning the lights off.";
 		break;
 		case 'anything':
 			$speech = "Yes, you can type anything here.";
 		break;
 		default:
-			$speech = "Sorry, I didn't get that. Please as me something else.";
+			$speech = "Aún no aprendo eso que me dices, pero te aseguro que pronto lo haré.";
 		break;
 	}
 
