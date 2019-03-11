@@ -10,29 +10,35 @@ if ($method == "POST"){
 	$text = $json->result->parameters->text;
 
 	switch ($text){
-		case 'que opinas de mi esposo eduardo':
-			$speech = "Que es un gran chico, y que desde hace tiempo, ha decidido y desea terminar su vida a tu lado. El te ama!";
+		case 'change temperature to 70':
+			$speech = "FFFF00160000000000000000FFFFFF9300000000074242494E434F00FFA3000200000000000000000065FF83000E000000000000000000650000000000003F02BC000000FF83000E000000000000000000650000000000003F02BC000000FF83000E000000000000000000650000000000003F02BC000000";
+			$displayText = "OK, I will change temperature to 70";
+		break;
+		case 'change temperature to 72':
+			$speech = "FFFF00160000000000000000FFFFFF9300000000074242494E434F00FFA3000200000000000000000065FF83000E000000000000000000650000000000003F02D0000000FF83000E000000000000000000650000000000003F02D0000000FF83000E000000000000000000650000000000003F02D0000000";
+			$displayText = "OK, I will change temperature to 72";
 		break;
 		case 'lights on':
 			$speech = "Turning the lights on, now.";
+			$displayText = "Turning the lights on, now.";
 		break;
-		case 'Hey Google':
+		case 'hey Google':
 			$speech = "Hi Eduardo, glad to hear you again.";
+			$displayText = "Hi Eduardo, glad to hear you again.";
 		break;
-		case 'Lights off':
+		case 'lights off':
 			$speech = "Turning the lights off.";
-		break;
-		case 'anything':
-			$speech = "Yes, you can type anything here.";
+			$displayText = "Turning the lights off.";
 		break;
 		default:
-			$speech = "Aún no aprendo eso que me dices, pero te aseguro que pronto lo haré.";
+			$speech = "I'm still a virtual kid, but soon I will grow up!";
+			$displayText = "I'm still a virtual kid, but soon I will grow up!";
 		break;
 	}
 
 	$response = new stdClass();
 	$response->speech = $speech;
-	$response->displayText = $speech;
+	$response->displayText = $displayText;
 	$response->source = "webhook";
 	echo json_encode($response);
 
