@@ -30,23 +30,23 @@ if ($method == "POST"){
 			$speech = "Turning the lights off";
 			$displayText = "Turning the lights off";
 		break;
-		case 'open drapes':
+		case 'open the drapes':
 			$speech = "Opening drapes";
 			$displayText = "Opening drapes";
 		break;
-		case 'close drapes':
+		case 'close the drapes':
 			$speech = "Closing drapes";
 			$displayText = "Closing drapes";
 		break;
-		case 'fan speed high':
+		case 'high speed':
 			$speech = "Ok, max speed!";
 			$displayText = "Ok, max speed!";
 		break;
-		case 'fan speed medium':
+		case 'medium speed':
 			$speech = "Medium speed, alright";
 			$displayText = "Medium speed, alright";
 		break;
-		case 'fan speed low':
+		case 'low speed':
 			$speech = "For sure, low speed fan";
 			$displayText = "For sure, low speed fan";
 		break;
