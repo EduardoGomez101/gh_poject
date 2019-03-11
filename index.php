@@ -4,7 +4,7 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 //Process only when method is POST
 if ($method == "POST"){
-	$requestBoby = file_get_contents('php://input');
+	$requestBody = file_get_contents('php://input');
 	$json = json_decode($requestBoby);
 
 	$text = $json->result->parameters->text;
