@@ -13,10 +13,10 @@ if ($method == "POST"){
 		case 'hi':
 			$speech = "Hi, Nice to meet you";
 		break;
-		case 'bye'
+		case 'bye':
 			$speech = "Bye, good night";
 		break;
-		case 'anything'
+		case 'anything':
 			$speech = "yes, you can type anything here.";
 		break;
 		default:
