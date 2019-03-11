@@ -17,14 +17,14 @@ if ($method == "POST"){
 			$speech = "Bye, good night";
 		break;
 		case 'anything':
-			$speech = "yes, you can type anything here.";
+			$speech = "Yes, you can type anything here.";
 		break;
 		default:
 			$speech = "Sorry, I didn't get that. Please as me something else.";
 		break;
 	}
 
-	$response = new \stdClass();
+	$response = new stdClass();
 	$response->speech = "";
 	$response->displayText = "";
 	$response->source = "webhook";
