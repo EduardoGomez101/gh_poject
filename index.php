@@ -5,7 +5,7 @@ $method = $_SERVER['REQUEST_METHOD'];
 //Process only when method is POST
 if ($method == "POST"){
 	$requestBody = file_get_contents('php://input');
-	$json = json_decode($requestBoby);
+	$json = json_decode($requestBody);
 
 	$text = $json->result->parameters->text;
 
@@ -13,10 +13,10 @@ if ($method == "POST"){
 		case 'hi':
 			$speech = "Hi, Nice to meet you";
 		break;
-		case 'bye':
+		case 'bye'
 			$speech = "Bye, good night";
 		break;
-		case 'anything':
+		case 'anything'
 			$speech = "yes, you can type anything here.";
 		break;
 		default:
@@ -27,7 +27,7 @@ if ($method == "POST"){
 	$response = new \stdClass();
 	$response->speech = "";
 	$response->displayText = "";
-	$response->source = "webhook";
+	$response->source = "webhook101";
 	echo json_encode($response);
 
 }
