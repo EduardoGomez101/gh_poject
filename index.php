@@ -25,6 +25,8 @@ if ($method == "POST"){
 	}
 
 	$response = new \stdClass;
+	$response->request = $requestBody;
+	$response->jsonFile = $json;
 	$response->texto = $text;
 	$response->speech = "texto1";
 	$response->displayText = "texto2";
