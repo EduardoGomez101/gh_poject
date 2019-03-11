@@ -47,8 +47,8 @@ if ($method == "POST"){
 			$displayText = "Medium speed, alright";
 		break;
 		case 'low speed':
-			$speech = "For sure, low speed fan";
-			$displayText = "For sure, low speed fan";
+			$speech = "For sure, fan in low speed";
+			$displayText = "For sure, fan in low speed";
 		break;
 		default:
 			$speech = "I'm still a virtual kid, but soon I will grow up!";
