@@ -7,7 +7,7 @@ if ($method == "POST"){
 	$requestBody = file_get_contents('php://input');
 	$json = json_decode($requestBody);
 
-	$text = $jsonFile->queryResult->parameters->text;
+	$text = $json->jsonFile->queryResult->parameters->text;
 
 	switch ($text){
 		case 'hi':
@@ -25,6 +25,7 @@ if ($method == "POST"){
 	}
 
 	$response = new \stdClass;
+	$response->jsonF = $json;
 	$response->texto = $text;
 	$response->speech = "";
 	$response->displayText = "";
