@@ -7,7 +7,7 @@ if ($method == "POST"){
 	$requestBody = file_get_contents('php://input');
 	$json = json_decode($requestBody);
 
-	$text = $json->result->parameters->text;
+	$text = strtolower($json->result->parameters->text);
 
 	switch ($text){
 		case 'temperature to 70':
@@ -22,7 +22,7 @@ if ($method == "POST"){
 			$speech = "Turning the lights on, now";
 			$displayText = "Turning the lights on, now";
 		break;
-		case 'hey Google':
+		case 'hey google':
 			$speech = "Hi Eduardo, glad to hear you again";
 			$displayText = "Hi Eduardo, glad to hear you again";
 		break;
