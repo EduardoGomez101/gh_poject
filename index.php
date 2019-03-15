@@ -50,6 +50,10 @@ if ($method == "POST"){
 			$speech = "For sure, fan in low speed";
 			$displayText = "For sure, fan in low speed";
 		break;
+		case 'how is the office moving going in niantic':
+			$speech = "Going well but we have to keep QA environments down hahaha";
+			$displayText = "123456789_123456789_123456789_123456789_";
+		break;
 		default:
 			$speech = "I'm still a virtual kid, but soon I will grow up!";
 			$displayText = "I'm still a virtual kid, but soon I will grow up!";
