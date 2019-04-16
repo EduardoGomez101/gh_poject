@@ -40,7 +40,7 @@ if ($method == "POST"){
 		break;
 		case 'high speed':
 			$speech = "Ok, max speed!";
-			$displayText = "Ok, max speed!";
+			$displayText = "Ok, max speed! <a href='https://inncom.com/images/TechnicalDocs/E528_-Product-Guide_Rev8.0_20MAR17.pdf'> aqui";
 		break;
 		case 'medium speed':
 			$speech = "Medium speed, alright";
