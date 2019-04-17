@@ -138,7 +138,7 @@ $card["card"]->buttons[] = $buttons;
 
 
 $response = new stdClass();
-$response->fulfillmentText = "This is a text response";
+//$response->fulfillmentText = "This is a text response";
 
 $response->fulfillmentMessages[] = $card;
 
