@@ -141,6 +141,8 @@ $response->fulfillment->messages->type = "simple_response";
 $response->fulfillment->messages->platform = "google";
 $response->fulfillment->messages->textToSpeech = "Prueba de speech";
 $response->fulfillment->messages->displayText = "prueba de display";
+$response->fulfillment->messages->type = "0";
+$response->fulfillment->messages->speech = "";
 echo json_encode($response);
 
 
