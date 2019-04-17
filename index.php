@@ -95,13 +95,13 @@ if ($method == "POST"){
 
 //Este ya funciona:
 $buttons = array();
-$buttons["text"] = "Button text";
-$buttons["postback"] = "https://assistant.google.com/";
+$buttons["text"] = "Manual de Usuario - E528";
+$buttons["postback"] = "https://inncom.com/images/TechnicalDocs/E528_-Product-Guide_Rev8.0_20MAR17.pdf";
 
 $card = array();
-$card["card"]->title = "card title";
-$card["card"]->subtitle = "card text";
-$card["card"]->imageUri = "https://assistant.google.com/static/images/molecule/Molecule-Formation-stop.png";
+$card["card"]->title = "E528";
+$card["card"]->subtitle = "Termostato";
+$card["card"]->imageUri = "https://sc01.alicdn.com/kf/HTB1f9srKpXXXXXsXXXXq6xXFXXXo/e4-Smart-Digital-Thermostat-E528.jpg_350x350.jpg";
 $card["card"]->buttons[] = $buttons;
 
 //$val = array();
