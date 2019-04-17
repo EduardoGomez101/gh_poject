@@ -134,8 +134,7 @@ if ($method == "POST"){
 $response = new stdClass();
 $response->fulfillmentText = "This is a text response";
 
-$response->fulfillmentMessages["card"]->title = "card title";
-$response->fulfillmentMessages["card"]->subtitle = "card text";
+$response->fulfillmentMessages[] = $val;
 
 
 
