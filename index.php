@@ -81,11 +81,45 @@ if ($method == "POST"){
 //}
 //
 //
+//$response = new stdClass();
+//$response->payload->google->expectUserResponse = true;
+//$response->payload->google->richResponse->items->simpleResponse->textToSpeech = "texto a ser hablado";
+//$response->payload->google->richResponse->items->simpleResponse->displayText = "texto a ser mostrado";
+//echo json_encode($response);
+
+//************************************SEGUNDA OPCION
+//{
+//  "expectUserResponse": true,
+//  "expectedInputs": [
+//    {
+//      "possibleIntents": [
+//        {
+//          "intent": "actions.intent.TEXT"
+//        }
+//      ],
+//      "inputPrompt": {
+//        "richInitialPrompt": {
+//          "items": [
+//            {
+//              "simpleResponse": {
+//                "textToSpeech": "Howdy, this is GeekNum. I can tell you fun facts about almost any number, my favorite is 42. What number do you have in mind?",
+//                "displayText": "Howdy! I can tell you fun facts about almost any number. What do you have in mind?"
+//              }
+//            }
+//          ]
+//        }
+//      }
+//    }
+//  ]
+//}
+
 $response = new stdClass();
-$response->payload->google->expectUserResponse = true;
-$response->payload->google->richResponse->items->simpleResponse->textToSpeech = "texto a ser hablado";
-$response->payload->google->richResponse->items->simpleResponse->displayText = "texto a ser mostrado";
+$response->expectUserResponse = true;
+$response->expectedInputs->possibleIntents->intent = "actions.intent.TEXT";
+$response->expectedInputs->inputPrompt->richInitialPrompt->items->simpleResponse->textToSpeech = "texto de textToSpeech";
+$response->expectedInputs->inputPrompt->richInitialPrompt->items->simpleResponse->displayText = "texto de displayText";
 echo json_encode($response);
+
 
 //	$response = new stdClass();
 //	$response->speech = $speech;
