@@ -93,7 +93,23 @@ if ($method == "POST"){
 //  ],
 
 
+$val = array();
+$val["card"]->title = "card title";
+$val["card"]->subtitle = "card text";
 
+
+//$val = array();
+//$val["id"]="123456";
+//$val["name"]="adam";
+//
+//$data = array();
+//$data["item"][]=$val;
+//
+//echo json_encode($data);
+//
+//And it will ouput below:
+//
+//{"item":[{"id":"123456", "name":"adam"}]}
 
 
 //$marker = array(
@@ -114,29 +130,14 @@ if ($method == "POST"){
 //    );
 
 
+
 $response = new stdClass();
 $response->fulfillmentText = "This is a text response";
 
-$response->fulfillmentMessages => array(
-	"Titulo"
-	);
+$response->fulfillmentMessages[] = $val;
 
 
 
-//$response->fulfillmentMessagesNuevos = array(
-//    'type' => 'Feature',
-//    'properties' => array(
-//      'title' => $programme->title,
-//      "marker-symbol" => "music"
-//    ),
-//    'geometry' => array(
-//      'type' => 'Point',
-//      'coordinates' => array( 
-//        $programme->programme_location->lng,
-//        $programme->programme_location->lat
-//      )
-//    )
-//  );
 
 
 //$response->fulfillmentMessages->array(card->title = "card title";
