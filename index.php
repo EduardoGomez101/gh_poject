@@ -63,16 +63,16 @@ if ($method == "POST"){
 
 $response = new stdClass();
 $response->fulfillmentText = "This is a text response";
-//$response->fulfillmentMessages->card->title = "card title";
-//$response->fulfillmentMessages->card->subtitle = "card text";
-//$response->fulfillmentMessages->card->imageUri = "https://assistant.google.com/static/images/molecule/Molecule-Formation-stop.png";
-//$response->fulfillmentMessages->card->buttons->text = "button text";
-//$response->fulfillmentMessages->card->buttons->text = "https://assistant.google.com/";
+$response->fulfillmentMessages->card->title = "card title";
+$response->fulfillmentMessages->card->subtitle = "card text";
+$response->fulfillmentMessages->card->imageUri = "https://assistant.google.com/static/images/molecule/Molecule-Formation-stop.png";
+$response->fulfillmentMessages->card->buttons->text = "button text";
+$response->fulfillmentMessages->card->buttons->text = "https://assistant.google.com/";
 $response->source = "example.com";
-$response->payload->google->expectUserResponse = true;
-$response->payload->google->richResponse->items->simpleResponse->textToSpeech = "This is a simple response";
-$response->payload->facebook->text = "Hello, Facebook";
-$response->payload->slack->text = "This is a text response for Slack";
+//$response->payload->google->expectUserResponse = true;
+//$response->payload->google->richResponse->items->simpleResponse->textToSpeech = "This is a simple response";
+//$response->payload->facebook->text = "Hello, Facebook";
+//$response->payload->slack->text = "This is a text response for Slack";
 //$response->outputContexts->name = "projects/${PROJECT_ID}/agent/sessions/${SESSION_ID}/contexts/context name";
 //$response->outputContexts->lifespanCount = 5;
 //$response->outputContexts->parameters->param = "param value";
