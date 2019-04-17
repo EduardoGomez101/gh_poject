@@ -62,92 +62,78 @@ if ($method == "POST"){
 	}
 
 
-//PRUEBA INICIAL
-//PENDIENTE, EN DONDE SOLO SE MANDA UN "SIMPLE RESPONSE"
-
-
-
-
-
-
-
-//VA AVANZANDO---
 
 //Este ya funciona:
-$buttons = array();
-$buttons["text"] = "Manual de Usuario - E528";
-$buttons["postback"] = "https://inncom.com/images/TechnicalDocs/E528_-Product-Guide_Rev8.0_20MAR17.pdf";
+//$buttons = array();
+//$buttons["text"] = "Manual de Usuario - E528";
+//$buttons["postback"] = "https://inncom.com/images/TechnicalDocs/E528_-Product-Guide_Rev8.0_20MAR17.pdf";
+//
+//$card = array();
+//$card["card"]->title = "E528";
+//$card["card"]->subtitle = "Termostato";
+//$card["card"]->imageUri = "https://sc01.alicdn.com/kf/HTB1f9srKpXXXXXsXXXXq6xXFXXXo/e4-Smart-Digital-Thermostat-E528.jpg_350x350.jpg";
+//$card["card"]->buttons[] = $buttons;
+//
+//$response = new stdClass();
+//$response->fulfillmentText = "This is a text response";
+//$response->fulfillmentMessages[] = $card;
+//$response->source = "example.com";
+//echo json_encode($response);
 
-$card = array();
-$card["card"]->title = "E528";
-$card["card"]->subtitle = "Termostato";
-$card["card"]->imageUri = "https://sc01.alicdn.com/kf/HTB1f9srKpXXXXXsXXXXq6xXFXXXo/e4-Smart-Digital-Thermostat-E528.jpg_350x350.jpg";
-$card["card"]->buttons[] = $buttons;
-
-$response = new stdClass();
-$response->fulfillmentText = "This is a text response";
-$response->fulfillmentMessages[] = $card;
-$response->source = "example.com";
-echo json_encode($response);
-
-//************************************SEGUNDA OPCION
 //{
-//  "expectUserResponse": true,
-//  "expectedInputs": [
-//    {
-//      "possibleIntents": [
-//        {
-//          "intent": "actions.intent.TEXT"
-//        }
-//      ],
-//      "inputPrompt": {
-//        "richInitialPrompt": {
-//          "items": [
-//            {
-//              "simpleResponse": {
-//                "textToSpeech": "Howdy, this is GeekNum. I can tell you fun facts about almost any number, my favorite is 42. What number do you have in mind?",
-//                "displayText": "Howdy! I can tell you fun facts about almost any number. What do you have in mind?"
-//              }
+//  "payload": {
+//    "google": {
+//      "expectUserResponse": true,
+//      "richResponse": {
+//        "items": [
+//          {
+//            "simpleResponse": {
+//              "textToSpeech": "This is a basic card example."
 //            }
-//          ]
-//        }
+//          },
+//          {
+//            "basicCard": {
+//              "title": "Title: this is a title",
+//              "subtitle": "This is a subtitle",
+//              "formattedText": "This is a basic card.  Text in a basic card can include \"quotes\" and\n        most other unicode characters including emoji 📱.  Basic cards also support\n        some markdown formatting like *emphasis* or _italics_, **strong** or\n        __bold__, and ***bold itallic*** or ___strong emphasis___ as well as other\n        things like line  \nbreaks",
+//              "image": {
+//                "url": "https://example.com/image.png",
+//                "accessibilityText": "Image alternate text"
+//              },
+//              "buttons": [
+//                {
+//                  "title": "This is a button",
+//                  "openUrlAction": {
+//                    "url": "https://assistant.google.com/"
+//                  }
+//                }
+//              ],
+//              "imageDisplayOptions": "CROPPED"
+//            }
+//          }
+//        ]
 //      }
 //    }
-//  ]
+//  }
 //}
 
-//$response = new stdClass();
-//$response->expectUserResponse = true;
-//$response->expectedInputs->possibleIntents->intent = "actions.intent.TEXT";
-//$response->expectedInputs->inputPrompt->richInitialPrompt->items->simpleResponse->speech = "texto de textToSpeech";
-//$response->expectedInputs->inputPrompt->richInitialPrompt->items->simpleResponse->displayText = "texto de displayText";
-//echo json_encode($response);
+$buttons2 = array();
+$buttons2["title"] = "This is a button";
+$buttons2["openUrlAction"]->url = "https://assistant.google.com";
 
+$items = array();
+$items["simpleResponse"]->textToSpeech = "This is a basic card example";
+$items["basicCard"]->title = "Title this as a title";
+$items["basicCard"]->subtitle = "This is a subtitle";
+$items["basicCard"]->formattedText = "This is a basic card.  Text in a basic card can include \"quotes\" and\n        most other unicode characters including emoji 📱.  Basic cards also support\n        some markdown formatting like *emphasis* or _italics_, **strong** or\n        __bold__, and ***bold itallic*** or ___strong emphasis___ as well as other\n        things like line  \nbreaks";
+$items["basicCard"]->image->url = "https://example.com/image.png";
+$items["basicCard"]->image->accessibilityText = "Image alternate text";
+$items["basicCard"][] = $buttons2;
+$items["basicCard"]->imageDisplayOptions = "CROPPED";
 
-//********************************** TERCER INTENTO
-//"fulfillment": {
-//      "messages":
-//        {
-//          "type": "simple_response",
-//          "platform": "google",
-//          "textToSpeech": "Prueba de audio",
-//          "displayText": "Salida de texto"
-//        },
-//        {
-//          "type": 0,
-//          "speech": ""
-//        }
-//    }
-
-//$response = new stdClass();
-//$response->fulfillment->messages->type = "simple_response";
-//$response->fulfillment->messages->platform = "google";
-//$response->fulfillment->messages->textToSpeech = "Prueba de speech";
-//$response->fulfillment->messages->displayText = "prueba de display";
-//$response->fulfillment->messages->type = "0";
-//$response->fulfillment->messages->speech = "";
-//echo json_encode($response);
-
+$response = new stdClass();
+$response->payload->google->expectUserResponse = true;
+$response->payload->google->richResponse[] = $items;
 
 
 //******************* EL QUE FUNCIONA BIEN ES EL SIGUIENTE:
