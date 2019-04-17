@@ -93,10 +93,10 @@ if ($method == "POST"){
 //  ],
 
 
-$val = array();
-$val["card"]->title = "card title";
-$val["card"]->subtitle = "card text";
-
+//Este ya funciona:
+//$val = array();
+//$val["card"]->title = "card title";
+//$val["card"]->subtitle = "card text";
 
 //$val = array();
 //$val["id"]="123456";
@@ -134,7 +134,8 @@ $val["card"]->subtitle = "card text";
 $response = new stdClass();
 $response->fulfillmentText = "This is a text response";
 
-$response->fulfillmentMessages[] = $val;
+$response->fulfillmentMessages["card"]->title = "card title";
+$response->fulfillmentMessages["card"]->subtitle = "card text";
 
 
 
