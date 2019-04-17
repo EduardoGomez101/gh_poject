@@ -79,13 +79,13 @@ if ($method == "POST"){
 //    }
 //  }
 //}
-//
-//
-//$response = new stdClass();
-//$response->payload->google->expectUserResponse = true;
-//$response->payload->google->richResponse->items->simpleResponse->textToSpeech = "texto a ser hablado";
-//$response->payload->google->richResponse->items->simpleResponse->displayText = "texto a ser mostrado";
-//echo json_encode($response);
+
+
+$response = new stdClass();
+$response->payload->google->expectUserResponse = true;
+$response->payload->google->richResponse->items->simpleResponse->speech = "texto a ser hablado";
+$response->payload->google->richResponse->items->simpleResponse->displayText = "texto a ser mostrado";
+echo json_encode($response);
 
 //************************************SEGUNDA OPCION
 //{
@@ -113,12 +113,12 @@ if ($method == "POST"){
 //  ]
 //}
 
-$response = new stdClass();
-$response->expectUserResponse = true;
-$response->expectedInputs->possibleIntents->intent = "actions.intent.TEXT";
-$response->expectedInputs->inputPrompt->richInitialPrompt->items->simpleResponse->speech = "texto de textToSpeech";
-$response->expectedInputs->inputPrompt->richInitialPrompt->items->simpleResponse->displayText = "texto de displayText";
-echo json_encode($response);
+//$response = new stdClass();
+//$response->expectUserResponse = true;
+//$response->expectedInputs->possibleIntents->intent = "actions.intent.TEXT";
+//$response->expectedInputs->inputPrompt->richInitialPrompt->items->simpleResponse->speech = "texto de textToSpeech";
+//$response->expectedInputs->inputPrompt->richInitialPrompt->items->simpleResponse->displayText = "texto de displayText";
+//echo json_encode($response);
 
 
 //	$response = new stdClass();
