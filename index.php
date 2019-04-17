@@ -94,9 +94,15 @@ if ($method == "POST"){
 
 
 //Este ya funciona:
-//$val = array();
-//$val["card"]->title = "card title";
-//$val["card"]->subtitle = "card text";
+$buttons = array();
+$buttons["buttons"]->text = "Button text";
+$buttons["buttons"]->postback = "https://assistant.google.com/";
+
+$card = array();
+$card["card"]->title = "card title";
+$card["card"]->subtitle = "card text";
+$card["card"]->imageUri = "https://assistant.google.com/static/images/molecule/Molecule-Formation-stop.png";
+$card["card"] = $buttons;
 
 //$val = array();
 //$val["id"]="123456";
@@ -134,7 +140,7 @@ if ($method == "POST"){
 $response = new stdClass();
 $response->fulfillmentText = "This is a text response";
 
-$response->fulfillmentMessages[] = $val;
+$response->fulfillmentMessages[] = $card;
 
 
 
