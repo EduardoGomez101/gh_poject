@@ -64,8 +64,8 @@ if ($method == "POST"){
 
 
 $response = new stdClass();
-$response->fulfillment_text = "fulfillmentText";
-$response->fulfillment_messages->text = "Texto a presentar";
+//$response->fulfillment_text = "fulfillmentText";
+$response->fulfillment_messages->text->value = "Texto a presentar";
 $response->source = "webhook";
 echo json_encode($response);
 
