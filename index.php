@@ -64,8 +64,10 @@ if ($method == "POST"){
 
 
 $response = new stdClass();
-$response->google->expectUserResponse = true;
-$response->google->richResponse->items->simpleResponse->textToSpeech = "Ejemplo";
+$response->fulfillmentText = "fulfillmentText";
+$response->fulfillmentMessages->simpleResponses->simpleResponses->textToSpeech = "Texto a hablar";
+$response->fulfillmentMessages->simpleResponses->simpleResponses->displayText = "Texto a display";
+$response->source = "webhook";
 echo json_encode($response);
 
 //************************************SEGUNDA OPCION
