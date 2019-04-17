@@ -81,11 +81,11 @@ if ($method == "POST"){
 //}
 
 
-$response = new stdClass();
-$response->payload->google->expectUserResponse = true;
-$response->payload->google->richResponse->items->simpleResponse->speech = "texto a ser hablado";
-$response->payload->google->richResponse->items->simpleResponse->displayText = "texto a ser mostrado";
-echo json_encode($response);
+//$response = new stdClass();
+//$response->payload->google->expectUserResponse = true;
+//$response->payload->google->richResponse->items->simpleResponse->speech = "texto a ser hablado";
+//$response->payload->google->richResponse->items->simpleResponse->displayText = "texto a ser mostrado";
+//echo json_encode($response);
 
 //************************************SEGUNDA OPCION
 //{
@@ -120,6 +120,32 @@ echo json_encode($response);
 //$response->expectedInputs->inputPrompt->richInitialPrompt->items->simpleResponse->displayText = "texto de displayText";
 //echo json_encode($response);
 
+
+//********************************** TERCER INTENTO
+//"fulfillment": {
+//      "messages":
+//        {
+//          "type": "simple_response",
+//          "platform": "google",
+//          "textToSpeech": "Prueba de audio",
+//          "displayText": "Salida de texto"
+//        },
+//        {
+//          "type": 0,
+//          "speech": ""
+//        }
+//    }
+
+$response = new stdClass();
+$response->fulfillment->messages->type = "simple_response";
+$response->fulfillment->messages->platform = "google";
+$response->fulfillment->messages->textToSpeech = "Prueba de speech";
+$response->fulfillment->messages->displayText = "prueba de display";
+echo json_encode($response);
+
+
+
+//******************* EL QUE FUNCIONA BIEN ES EL SIGUIENTE:
 
 //	$response = new stdClass();
 //	$response->speech = $speech;
