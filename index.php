@@ -73,12 +73,32 @@ if ($method == "POST"){
 
 //VA AVANZANDO---
 
+//$marker = array(
+//        'type' => 'Feature',
+//        'properties' => array(
+//            'title' => $programme->title,
+//            'url' => $programme->url,
+//            'summary' => $programme->programme_summary,
+//            'image' => $programme->programme_venue_image->url
+//        ),
+//        'geometry' => array(
+//            'type' => 'Point',
+//            'coordinates' => array(
+//                $programme->programme_location->lng,
+//                $programme->programme_location->lat
+//            )
+//        )
+//    );
 
 
 $response = new stdClass();
 $response->fulfillmentText = "This is a text response";
 
-$response->fulfillmentMessages = array(card);
+$response->fulfillmentMessages = array(
+										card->title => "card title",
+										card->subtitle => "card text"
+
+	);
 
 
 //$response->fulfillmentMessages->array(card->title = "card title";
