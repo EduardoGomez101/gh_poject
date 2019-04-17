@@ -80,42 +80,42 @@ if ($method == "POST"){
 //$response->source = "example.com";
 //echo json_encode($response);
 
-{
-  "payload": {
-    "google": {
-      "expectUserResponse": true,
-      "richResponse": {
-        "items": [
-          {
-            "simpleResponse": {
-              "textToSpeech": "This is a basic card example."
-            }
-          },
-          {
-            "basicCard": {
-              "title": "Title: this is a title",
-              "subtitle": "This is a subtitle",
-              "formattedText": "This is a basic card.  Text in a basic card can include \"quotes\" and\n        most other unicode characters including emoji 📱.  Basic cards also support\n        some markdown formatting like *emphasis* or _italics_, **strong** or\n        __bold__, and ***bold itallic*** or ___strong emphasis___ as well as other\n        things like line  \nbreaks",
-              "image": {
-                "url": "https://example.com/image.png",
-                "accessibilityText": "Image alternate text"
-              },
-              "buttons": [
-                {
-                  "title": "This is a button",
-                  "openUrlAction": {
-                    "url": "https://assistant.google.com/"
-                  }
-                }
-              ],
-              "imageDisplayOptions": "CROPPED"
-            }
-          }
-        ]
-      }
-    }
-  }
-}
+//{
+//  "payload": {
+//    "google": {
+//      "expectUserResponse": true,
+//      "richResponse": {
+//        "items": [
+//          {
+//            "simpleResponse": {
+//              "textToSpeech": "This is a basic card example."
+//            }
+//          },
+//          {
+//            "basicCard": {
+//              "title": "Title: this is a title",
+//              "subtitle": "This is a subtitle",
+//              "formattedText": "This is a basic card.  Text in a basic card can include \"quotes\" and\n        most other unicode characters including emoji 📱.  Basic cards also support\n        some markdown formatting like *emphasis* or _italics_, **strong** or\n        __bold__, and ***bold itallic*** or ___strong emphasis___ as well as other\n        things like line  \nbreaks",
+//              "image": {
+//                "url": "https://example.com/image.png",
+//                "accessibilityText": "Image alternate text"
+//              },
+//              "buttons": [
+//                {
+//                  "title": "This is a button",
+//                  "openUrlAction": {
+//                    "url": "https://assistant.google.com/"
+//                  }
+//                }
+//              ],
+//              "imageDisplayOptions": "CROPPED"
+//            }
+//          }
+//        ]
+//      }
+//    }
+//  }
+//}
 
 $buttons2 = array();
 $buttons2["title"] = "This is a button";
@@ -133,7 +133,7 @@ $items["basicCard"]->imageDisplayOptions = "CROPPED";
 
 $response = new stdClass();
 $response->payload->google->expectUserResponse = true;
-$response->payload->google->richResponse[] = $items;
+$response->payload->google->richResponse->items[] = $items;
 
 echo json_encode($response);
 
