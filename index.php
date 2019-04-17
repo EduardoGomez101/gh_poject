@@ -73,26 +73,6 @@ if ($method == "POST"){
 
 //VA AVANZANDO---
 
-
-
-
-//"fulfillmentMessages": [
-//    {
-//      "card": {
-//        "title": "card title",
-//        "subtitle": "card text",
-//        "imageUri": "https://assistant.google.com/static/images/molecule/Molecule-Formation-stop.png",
-//        "buttons": [
-//          {
-//            "text": "button text",
-//            "postback": "https://assistant.google.com/"
-//          }
-//        ]
-//      }
-//    }
-//  ],
-
-
 //Este ya funciona:
 $buttons = array();
 $buttons["text"] = "Manual de Usuario - E528";
@@ -104,64 +84,10 @@ $card["card"]->subtitle = "Termostato";
 $card["card"]->imageUri = "https://sc01.alicdn.com/kf/HTB1f9srKpXXXXXsXXXXq6xXFXXXo/e4-Smart-Digital-Thermostat-E528.jpg_350x350.jpg";
 $card["card"]->buttons[] = $buttons;
 
-//$val = array();
-//$val["id"]="123456";
-//$val["name"]="adam";
-//
-//$data = array();
-//$data["item"][]=$val;
-//
-//echo json_encode($data);
-//
-//And it will ouput below:
-//
-//{"item":[{"id":"123456", "name":"adam"}]}
-
-
-//$marker = array(
-//        'type' => 'Feature',
-//        'properties' => array(
-//            'title' => $programme->title,
-//            'url' => $programme->url,
-//            'summary' => $programme->programme_summary,
-//            'image' => $programme->programme_venue_image->url
-//        ),
-//        'geometry' => array(
-//            'type' => 'Point',
-//            'coordinates' => array(
-//                $programme->programme_location->lng,
-//                $programme->programme_location->lat
-//            )
-//        )
-//    );
-
-
-
 $response = new stdClass();
-//$response->fulfillmentText = "This is a text response";
-
+$response->fulfillmentText = "This is a text response";
 $response->fulfillmentMessages[] = $card;
-
-
-
-
-
-//$response->fulfillmentMessages->array(card->title = "card title";
-//$response->fulfillmentMessages->array(card->subtitle = "card text";
-//$response->fulfillmentMessages->array(card->imageUri = "https://assistant.google.com/static/images/molecule/Molecule-Formation-stop.png";
-//$response->fulfillmentMessages->array(card->buttons->text = "button text";
-//$response->fulfillmentMessages->array(card->buttons->postback = "https://assistant.google.com/";
 $response->source = "example.com";
-//$response->payload->google->expectUserResponse = true;
-//$response->payload->google->richResponse->items->simpleResponse->textToSpeech = "This is a simple response";
-//$response->payload->facebook->text = "Hello, Facebook";
-//$response->payload->slack->text = "This is a text response for Slack";
-//$response->outputContexts->name = "projects/${PROJECT_ID}/agent/sessions/${SESSION_ID}/contexts/context name";
-//$response->outputContexts->lifespanCount = 5;
-//$response->outputContexts->parameters->param = "param value";
-//$response->followupEventInput->name = "event name";
-//$response->followupEventInput->languageCode = "es";
-//$response->followupEventInput->parameters->param = "param value";
 echo json_encode($response);
 
 //************************************SEGUNDA OPCION
