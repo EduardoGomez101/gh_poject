@@ -84,7 +84,6 @@ if ($method == "POST"){
 $response = new stdClass();
 $response->speech = "texto a ser hablado";
 $response->displayText = "texto a ser mostrado";
-$response->source = "webhook";
 echo json_encode($response);
 
 //************************************SEGUNDA OPCION
