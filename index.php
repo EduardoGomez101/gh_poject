@@ -63,13 +63,15 @@ if ($method == "POST"){
 
 $response = new stdClass();
 $response->fulfillmentText = "This is a text response";
-$response->fulfillmentMessages = "[";
-$response->fulfillmentMessages->card->title = "card title";
-$response->fulfillmentMessages->card->subtitle = "card text";
-$response->fulfillmentMessages->card->imageUri = "https://assistant.google.com/static/images/molecule/Molecule-Formation-stop.png";
-$response->fulfillmentMessages->card->buttons->text = "button text";
-$response->fulfillmentMessages->card->buttons->postback = "https://assistant.google.com/";
-$response->fulfillmentMessages = "]";
+
+$response->fulfillmentMessages->array(card);
+
+
+//$response->fulfillmentMessages->array(card->title = "card title";
+//$response->fulfillmentMessages->array(card->subtitle = "card text";
+//$response->fulfillmentMessages->array(card->imageUri = "https://assistant.google.com/static/images/molecule/Molecule-Formation-stop.png";
+//$response->fulfillmentMessages->array(card->buttons->text = "button text";
+//$response->fulfillmentMessages->array(card->buttons->postback = "https://assistant.google.com/";
 $response->source = "example.com";
 //$response->payload->google->expectUserResponse = true;
 //$response->payload->google->richResponse->items->simpleResponse->textToSpeech = "This is a simple response";
