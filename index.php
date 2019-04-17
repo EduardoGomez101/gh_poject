@@ -133,7 +133,7 @@ $items["basicCard"]->imageDisplayOptions = "CROPPED";
 
 $response = new stdClass();
 $response->payload->google->expectUserResponse = true;
-$response->payload->google->richResponse->items[] = $items;
+$response->payload->google->richResponse[] = $items;
 
 echo json_encode($response);
 
