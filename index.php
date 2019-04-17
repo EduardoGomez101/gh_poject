@@ -7,7 +7,7 @@ if ($method == "POST"){
 	$requestBody = file_get_contents('php://input');
 	$json = json_decode($requestBody);
 
-	$text = strtolower($json->result->parameters->text);
+	$text = strtolower($json->queryResult->parameters->text);
 
 	switch ($text){
 		case 'temperature to 70':
@@ -83,7 +83,7 @@ if ($method == "POST"){
 
 
 $response = new stdClass();
-$response->fulfillmentMessages->text->text = "texto a ser hablado";
+$response->queryResult->fulfillmentMessages->text->text = "texto a ser hablado";
 //$response->displayText = "texto a ser mostrado";
 echo json_encode($response);
 
