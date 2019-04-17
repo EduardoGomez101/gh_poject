@@ -61,11 +61,36 @@ if ($method == "POST"){
 		break;
 	}
 
-	$response = new stdClass();
-	$response->speech = $speech;
-	$response->displayText = $displayText;
-	$response->source = "webhook";
-	echo json_encode($response);
+
+//{
+//  "payload": {
+//    "google": {
+//      "expectUserResponse": true,
+//      "richResponse": {
+//        "items": [
+//          {
+//            "simpleResponse": {
+//              "textToSpeech": "Howdy, this is GeekNum. I can tell you fun facts about almost any number, my favorite is 42. What number do you have in mind?",
+//              "displayText": "Howdy! I can tell you fun facts about almost any number. What do you have in mind?"
+//            }
+//          }
+//        ]
+//      }
+//    }
+//  }
+//}
+
+$response = new stdClass();
+$response->payload->google->expectUserResponse = true;
+$response->payload->google->richResponse->items->simpleResponse->textToSpeech = "texto a ser hablado";
+$response->payload->google->richResponse->items->simpleResponse->textToSpeech = "texto a ser mostrado";
+echo json_encode($response);
+
+//	$response = new stdClass();
+//	$response->speech = $speech;
+//	$response->displayText = $displayText;
+//	$response->source = "webhook";
+//	echo json_encode($response);
 
 }
 else{
