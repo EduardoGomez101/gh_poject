@@ -102,7 +102,8 @@ $card = array();
 $card["card"]->title = "card title";
 $card["card"]->subtitle = "card text";
 $card["card"]->imageUri = "https://assistant.google.com/static/images/molecule/Molecule-Formation-stop.png";
-$card["card"]->buttons[] = $buttons;
+$card["card"]->buttons["text"] = "Button text";
+$card["card"]->buttons["postback"] = "https://assistant.google.com/";
 
 //$val = array();
 //$val["id"]="123456";
