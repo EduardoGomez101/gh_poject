@@ -81,9 +81,10 @@ if ($method == "POST"){
 //}
 
 
+
 $response = new stdClass();
-$response->textToSpeech = "texto a ser hablado";
-$response->displayText = "texto a ser mostrado";
+$response->fulfillmentMessages->text->text = "texto a ser hablado";
+//$response->displayText = "texto a ser mostrado";
 echo json_encode($response);
 
 //************************************SEGUNDA OPCION
