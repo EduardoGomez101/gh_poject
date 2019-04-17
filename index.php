@@ -61,10 +61,24 @@ if ($method == "POST"){
 		break;
 	}
 
+
+//PRUEBA INICIAL
+//PENDIENTE, EN DONDE SOLO SE MANDA UN "SIMPLE RESPONSE"
+
+
+
+
+
+
+
+//VA AVANZANDO---
+
+
+
 $response = new stdClass();
 $response->fulfillmentText = "This is a text response";
 
-$response->fulfillmentMessages = array(card);
+$response->fulfillmentMessages = array(card)->title->"card title";
 
 
 //$response->fulfillmentMessages->array(card->title = "card title";
