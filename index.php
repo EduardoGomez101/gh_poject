@@ -95,15 +95,14 @@ if ($method == "POST"){
 
 //Este ya funciona:
 $buttons = array();
-$buttons["buttons"]->text = "Button text";
-$buttons["buttons"]->postback = "https://assistant.google.com/";
+$buttons["text"] = "Button text";
+$buttons["postback"] = "https://assistant.google.com/";
 
 $card = array();
 $card["card"]->title = "card title";
 $card["card"]->subtitle = "card text";
 $card["card"]->imageUri = "https://assistant.google.com/static/images/molecule/Molecule-Formation-stop.png";
-$card["card"]->buttons["text"] = "Button text";
-$card["card"]->buttons["postback"] = "https://assistant.google.com/";
+$card["card"]->buttons[] = $buttons;
 
 //$val = array();
 //$val["id"]="123456";
