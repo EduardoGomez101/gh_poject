@@ -81,11 +81,12 @@ if ($method == "POST"){
 //}
 
 
-//$response = new stdClass();
-//$response->payload->google->expectUserResponse = true;
+$response = new stdClass();
+$response->payload->google->expectUserResponse = true;
+$response->payload->google->richResponse->items = "[{'simpleResponse':{'textToSpeech':'contenido para speech','displayText':'contenido de display'}}]";
 //$response->payload->google->richResponse->items->simpleResponse->speech = "texto a ser hablado";
 //$response->payload->google->richResponse->items->simpleResponse->displayText = "texto a ser mostrado";
-//echo json_encode($response);
+echo json_encode($response);
 
 //************************************SEGUNDA OPCION
 //{
@@ -136,14 +137,14 @@ if ($method == "POST"){
 //        }
 //    }
 
-$response = new stdClass();
-$response->fulfillment->messages->type = "simple_response";
-$response->fulfillment->messages->platform = "google";
-$response->fulfillment->messages->textToSpeech = "Prueba de speech";
-$response->fulfillment->messages->displayText = "prueba de display";
-$response->fulfillment->messages->type = "0";
-$response->fulfillment->messages->speech = "";
-echo json_encode($response);
+//$response = new stdClass();
+//$response->fulfillment->messages->type = "simple_response";
+//$response->fulfillment->messages->platform = "google";
+//$response->fulfillment->messages->textToSpeech = "Prueba de speech";
+//$response->fulfillment->messages->displayText = "prueba de display";
+//$response->fulfillment->messages->type = "0";
+//$response->fulfillment->messages->speech = "";
+//echo json_encode($response);
 
 
 
