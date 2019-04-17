@@ -82,8 +82,8 @@ if ($method == "POST"){
 
 
 $response = new stdClass();
-$response->payload->google->richResponse->items->simpleResponse->speech = "texto a ser hablado";
-$response->payload->google->richResponse->items->simpleResponse->displayText = "texto a ser mostrado";
+$response->simpleResponse->speech = "texto a ser hablado";
+$response->simpleResponse->displayText = "texto a ser mostrado";
 $response->source = "webhook";
 echo json_encode($response);
 
