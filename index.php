@@ -73,6 +73,29 @@ if ($method == "POST"){
 
 //VA AVANZANDO---
 
+
+
+
+//"fulfillmentMessages": [
+//    {
+//      "card": {
+//        "title": "card title",
+//        "subtitle": "card text",
+//        "imageUri": "https://assistant.google.com/static/images/molecule/Molecule-Formation-stop.png",
+//        "buttons": [
+//          {
+//            "text": "button text",
+//            "postback": "https://assistant.google.com/"
+//          }
+//        ]
+//      }
+//    }
+//  ],
+
+
+
+
+
 //$marker = array(
 //        'type' => 'Feature',
 //        'properties' => array(
@@ -94,11 +117,7 @@ if ($method == "POST"){
 $response = new stdClass();
 $response->fulfillmentText = "This is a text response";
 
-$response->fulfillmentMessages = array(
-										card->title => "card title",
-										card->subtitle => "card text"
-
-	);
+$response->fulfillmentMessages = array(card->title => "card title");
 
 
 //$response->fulfillmentMessages->array(card->title = "card title";
