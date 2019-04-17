@@ -117,21 +117,26 @@ if ($method == "POST"){
 $response = new stdClass();
 $response->fulfillmentText = "This is a text response";
 
-$response->fulfillmentMessages = array(card);
-$response->fulfillmentMessagesNuevos = array(
-    'type' => 'Feature',
-    'properties' => array(
-      'title' => $programme->title,
-      "marker-symbol" => "music"
-    ),
-    'geometry' => array(
-      'type' => 'Point',
-      'coordinates' => array( 
-        $programme->programme_location->lng,
-        $programme->programme_location->lat
-      )
-    )
-  );
+$response->fulfillmentMessages => array(
+	card->title = "Titulo"
+	);
+
+
+
+//$response->fulfillmentMessagesNuevos = array(
+//    'type' => 'Feature',
+//    'properties' => array(
+//      'title' => $programme->title,
+//      "marker-symbol" => "music"
+//    ),
+//    'geometry' => array(
+//      'type' => 'Point',
+//      'coordinates' => array( 
+//        $programme->programme_location->lng,
+//        $programme->programme_location->lat
+//      )
+//    )
+//  );
 
 
 //$response->fulfillmentMessages->array(card->title = "card title";
