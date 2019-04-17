@@ -118,7 +118,7 @@ $response = new stdClass();
 $response->fulfillmentText = "This is a text response";
 
 $response->fulfillmentMessages => array(
-	card->title = "Titulo"
+	"Titulo"
 	);
 
 
