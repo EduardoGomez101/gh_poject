@@ -172,8 +172,8 @@ $items = '{
 //$response->payload->google->expectUserResponse = true;
 //$response->payload->google->richResponse->items[] = $items;
 
-//echo json_encode($response);
-echo $items
+echo json_encode($items);
+echo $response
 
 //******************* EL QUE FUNCIONA BIEN ES EL SIGUIENTE:
 
