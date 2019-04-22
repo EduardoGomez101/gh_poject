@@ -173,7 +173,6 @@ $items = '{
 //$response->payload->google->richResponse->items[] = $items;
 
 echo json_encode($items);
-echo $response
 
 //******************* EL QUE FUNCIONA BIEN ES EL SIGUIENTE:
 
