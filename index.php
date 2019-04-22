@@ -117,7 +117,7 @@ if ($method == "POST"){
 //  }
 //}';
 
-$items = '{\"payload\": {"google": {"expectUserResponse": true,"richResponse": {"items": [{"simpleResponse": {"textToSpeech": "This is a basic card example."}},{"basicCard": {"title": "Title: this is a title","subtitle": "This is a subtitle","formattedText": "This is a basic card","image": {"url": "https://example.com/image.png","accessibilityText": "Image alternate text"},"buttons": [{"title": "This is a button","openUrlAction": {"url": "https://assistant.google.com/"}}],"imageDisplayOptions": "CROPPED"}}]}}}}';
+$items = '{"payload": {"google": {"expectUserResponse": true,"richResponse": {"items": [{"simpleResponse": {"textToSpeech": "This is a basic card example."}},{"basicCard": {"title": "Title: this is a title","subtitle": "This is a subtitle","formattedText": "This is a basic card","image": {"url": "https://example.com/image.png","accessibilityText": "Image alternate text"},"buttons": [{"title": "This is a button","openUrlAction": {"url": "https://assistant.google.com/"}}],"imageDisplayOptions": "CROPPED"}}]}}}}';
 
 //$buttons2 = array();
 //$buttons2["title"] = "This is a button";
@@ -136,8 +136,8 @@ $items = '{\"payload\": {"google": {"expectUserResponse": true,"richResponse": {
 //$response = new stdClass();
 //$response->payload->google->expectUserResponse = true;
 //$response->payload->google->richResponse->items[] = $items;
-
-echo json_encode($items);
+$decodificado = json_decode($items);
+echo json_encode($decodificado);
 
 //******************* EL QUE FUNCIONA BIEN ES EL SIGUIENTE:
 
