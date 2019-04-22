@@ -122,7 +122,7 @@ $buttons2["title"] = "This is a button";
 $buttons2["openUrlAction"]->url = "https://assistant.google.com";
 
 $items = array();
-$items[]->simpleResponse->textToSpeech = "This is a basic card example";
+$items["simpleResponse"]->textToSpeech = "This is a basic card example";
 $items["basicCard"]->title = "Title this as a title";
 $items["basicCard"]->subtitle = "This is a subtitle";
 $items["basicCard"]->formattedText = "This is a basic card.  Text in a basic card can include \"quotes\" and\n        most other unicode characters including emoji 📱.  Basic cards also support\n        some markdown formatting like *emphasis* or _italics_, **strong** or\n        __bold__, and ***bold itallic*** or ___strong emphasis___ as well as other\n        things like line  \nbreaks";
