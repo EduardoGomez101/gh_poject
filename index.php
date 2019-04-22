@@ -64,21 +64,21 @@ if ($method == "POST"){
 
 
 //Este ya funciona:
-//$buttons = array();
-//$buttons["text"] = "Manual de Usuario - E528";
-//$buttons["postback"] = "https://inncom.com/images/TechnicalDocs/E528_-Product-Guide_Rev8.0_20MAR17.pdf";
-//
-//$card = array();
-//$card["card"]->title = "E528";
-//$card["card"]->subtitle = "Termostato";
-//$card["card"]->imageUri = "https://sc01.alicdn.com/kf/HTB1f9srKpXXXXXsXXXXq6xXFXXXo/e4-Smart-Digital-Thermostat-E528.jpg_350x350.jpg";
-//$card["card"]->buttons[] = $buttons;
-//
-//$response = new stdClass();
-//$response->fulfillmentText = "This is a text response";
-//$response->fulfillmentMessages[] = $card;
-//$response->source = "example.com";
-//echo json_encode($response);
+$buttons = array();
+$buttons["text"] = "Manual de Usuario - E528";
+$buttons["postback"] = "https://inncom.com/images/TechnicalDocs/E528_-Product-Guide_Rev8.0_20MAR17.pdf";
+
+$card = array();
+$card["card"]->title = "E528";
+$card["card"]->subtitle = "Termostato";
+$card["card"]->imageUri = "https://sc01.alicdn.com/kf/HTB1f9srKpXXXXXsXXXXq6xXFXXXo/e4-Smart-Digital-Thermostat-E528.jpg_350x350.jpg";
+$card["card"]->buttons[] = $buttons;
+
+$response = new stdClass();
+$response->fulfillmentText = "This is a text response";
+$response->fulfillmentMessages[] = $card;
+$response->source = "example.com";
+echo json_encode($response);
 
 //$items = '{
 //  "payload": {
@@ -117,7 +117,44 @@ if ($method == "POST"){
 //  }
 //}';
 
-$items = '{"payload": {"google": {"expectUserResponse": true,"richResponse": {"items": [{"simpleResponse": {"textToSpeech": "This is a basic card example."}},{"basicCard": {"title": "Title: this is a title","subtitle": "This is a subtitle","formattedText": "This is a basic card","image": {"url": "https://example.com/image.png","accessibilityText": "Image alternate text"},"buttons": [{"title": "This is a button","openUrlAction": {"url": "https://assistant.google.com/"}}],"imageDisplayOptions": "CROPPED"}}]}}}}';
+//$items = '{
+//  "payload": {
+//    "google": {
+//      "expectUserResponse": true,
+//      "richResponse": {
+//        "items": [
+//          {
+//            "simpleResponse": {
+//              "textToSpeech": "This is a basic card example."
+//            }
+//          },
+//          {
+//            "basicCard": {
+//              "title": "Title: this is a title",
+//              "subtitle": "This is a subtitle",
+//              "formattedText": "This is a basic card",
+//              "image": {
+//                "url": "https://example.com/image.png",
+//                "accessibilityText": "Image alternate text"
+//              },
+//              "buttons": [
+//                {
+//                  "title": "This is a button",
+//                  "openUrlAction": {
+//                    "url": "https://assistant.google.com/"
+//                  }
+//                }
+//              ],
+//              "imageDisplayOptions": "CROPPED"
+//            }
+//          }
+//        ]
+//      }
+//    }
+//  }
+//}';
+
+//$items = '{"payload": {"google": {"expectUserResponse": true,"richResponse": {"items": [{"simpleResponse": {"textToSpeech": "This is a basic card example."}},{"basicCard": {"title": "Title: this is a title","subtitle": "This is a subtitle","formattedText": "This is a basic card","image": {"url": "https://example.com/image.png","accessibilityText": "Image alternate text"},"buttons": [{"title": "This is a button","openUrlAction": {"url": "https://assistant.google.com/"}}],"imageDisplayOptions": "CROPPED"}}]}}}}';
 
 //$buttons2 = array();
 //$buttons2["title"] = "This is a button";
@@ -136,8 +173,9 @@ $items = '{"payload": {"google": {"expectUserResponse": true,"richResponse": {"i
 //$response = new stdClass();
 //$response->payload->google->expectUserResponse = true;
 //$response->payload->google->richResponse->items[] = $items;
-$decodificado = json_decode($items);
-echo json_encode($decodificado);
+
+//$decodificado = json_decode($items);
+//echo json_encode($decodificado);
 
 //******************* EL QUE FUNCIONA BIEN ES EL SIGUIENTE:
 
