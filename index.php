@@ -168,11 +168,12 @@ $items = '{
 //$items["basicCard"]->buttons[] = $buttons2;
 //$items["basicCard"]->imageDisplayOptions = "CROPPED";
 
-$response = new stdClass();
-$response->payload->google->expectUserResponse = true;
-$response->payload->google->richResponse->items[] = $items;
+//$response = new stdClass();
+//$response->payload->google->expectUserResponse = true;
+//$response->payload->google->richResponse->items[] = $items;
 
-echo json_encode($response);
+//echo json_encode($response);
+echo $items
 
 //******************* EL QUE FUNCIONA BIEN ES EL SIGUIENTE:
 
