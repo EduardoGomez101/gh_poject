@@ -99,7 +99,7 @@ $prueba = '{"messages": [
     "title": "AoG Card Title",
     "type": "basic_card"
   }
-]';
+]}';
 $deco = json_decode($prueba);
 echo json_encode($deco);
 
