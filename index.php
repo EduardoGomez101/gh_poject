@@ -134,23 +134,23 @@ $prueba = '{
   }
 }';
 
-$prueba = '{
-  "payload": {
-    "google": {
-      "expectUserResponse": true,
-      "richResponse": {
-        "items": [
-          {
-            "simpleResponse": {
-              "textToSpeech": "Howdy, this is GeekNum. I can tell you fun facts about almost any number, my favorite is 42. What number do you have in mind?",
-              "displayText": "Howdy! I can tell you fun facts about almost any number. What do you have in mind?"
-            }
-          }
-        ]
-      }
-    }
-  }
-}';
+//$prueba = '{
+//  "payload": {
+//    "google": {
+//      "expectUserResponse": true,
+//      "richResponse": {
+//        "items": [
+//          {
+//            "simpleResponse": {
+//              "textToSpeech": "Howdy, this is GeekNum. I can tell you fun facts about almost any number, my favorite is 42. What number do you have in mind?",
+//              "displayText": "Howdy! I can tell you fun facts about almost any number. What do you have in mind?"
+//            }
+//          }
+//        ]
+//      }
+//    }
+//  }
+//}';
 
 
 
