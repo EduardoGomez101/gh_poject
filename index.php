@@ -80,7 +80,7 @@ if ($method == "POST"){
 
 
 $prueba = '{
-  "fulfillmentText": "Para acceder al service mode de un **Termostato E528**, siga los siguientes pasos:\n1. Presione y mantenga presionado el botón °F/°C",
+  "fulfillmentText": "Para acceder al service mode de un Termostato E528, siga los siguientes pasos:\n1. Presione y mantenga presionado el botón °F/°C",
   "payload": {
     "google": {
       "expectUserResponse": true,
@@ -88,14 +88,14 @@ $prueba = '{
         "items": [
           {
             "simpleResponse": {
-              "textToSpeech": "Service Mode - E528"
+              "textToSpeech": "Como acceder al Service Mode de un Termostato E528"
             }
           },
           {
             "basicCard": {
               "title": "E528",
               "subtitle": "Termostato",
-              "formattedText": "Para acceder al service mode de un **Termostato E528**, siga los siguientes pasos:\n1. Presione y mantenga presionado el botón °F/°C",
+              "formattedText": "Para acceder al service mode de un **Termostato E528**, siga los siguientes pasos:\n1. Presione y mantenga presionado el botón __°F/°C__\n2. Presione el botón __DISPLAY__\n3. Presione el botón __OFF/AUTO__\n4. Libere el botón __°F/°C__",
               "image": {
                 "url": "https://sc01.alicdn.com/kf/HTB1f9srKpXXXXXsXXXXq6xXFXXXo/e4-Smart-Digital-Thermostat-E528.jpg_350x350.jpg",
                 "accessibilityText": "Termostato E528"
