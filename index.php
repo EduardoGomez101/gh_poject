@@ -80,23 +80,7 @@ if ($method == "POST"){
 
 
 $prueba = '{
-  "fulfillmentText": "This is a text response",
-  "fulfillmentMessages": [
-    {
-      "card": {
-        "title": "card title",
-        "subtitle": "card text",
-        "imageUri": "https://assistant.google.com/static/images/molecule/Molecule-Formation-stop.png",
-        "buttons": [
-          {
-            "text": "button text",
-            "postback": "https://assistant.google.com/"
-          }
-        ]
-      }
-    }
-  ],
-  "source": "example.com",
+  "fulfillmentText": "Para acceder al service mode de un **Termostato E528**, siga los siguientes pasos:\n1. Presione y mantenga presionado el botón °F/°C",
   "payload": {
     "google": {
       "expectUserResponse": true,
@@ -104,24 +88,23 @@ $prueba = '{
         "items": [
           {
             "simpleResponse": {
-              "textToSpeech": "This is a basic card example.",
-              "displayText": "Esta es la info que deberia salir"
+              "textToSpeech": "Service Mode - E528"
             }
           },
           {
             "basicCard": {
-              "title": "Title: this is a title",
-              "subtitle": "This is a subtitle",
-              "formattedText": "This is a basic card.  Text in a basic card can include \"quotes\" and\n        most other unicode characters including emoji 📱.  Basic cards also support\n        some markdown formatting like *emphasis* or _italics_, **strong** or\n        __bold__, and ***bold itallic*** or ___strong emphasis___ as well as other\n        things like line  \nbreaks",
+              "title": "E528",
+              "subtitle": "Termostato",
+              "formattedText": "Para acceder al service mode de un **Termostato E528**, siga los siguientes pasos:\n1. Presione y mantenga presionado el botón °F/°C",
               "image": {
-                "url": "https://example.com/image.png",
-                "accessibilityText": "Image alternate text"
+                "url": "https://sc01.alicdn.com/kf/HTB1f9srKpXXXXXsXXXXq6xXFXXXo/e4-Smart-Digital-Thermostat-E528.jpg_350x350.jpg",
+                "accessibilityText": "Termostato E528"
               },
               "buttons": [
                 {
-                  "title": "This is a button",
+                  "title": "Descargar",
                   "openUrlAction": {
-                    "url": "https://assistant.google.com/"
+                    "url": "https://inncom.com/images/TechnicalDocs/E528_-Product-Guide_Rev8.0_20MAR17.pdf"
                   }
                 }
               ],
@@ -133,6 +116,8 @@ $prueba = '{
     }
   }
 }';
+
+//"formattedText": "This is a basic card.  Text in a basic card can include \"quotes\" and\n        most other unicode characters including emoji 📱.  Basic cards also support\n        some markdown formatting like *emphasis* or _italics_, **strong** or\n        __bold__, and ***bold itallic*** or ___strong emphasis___ as well as other\n        things like line  \nbreaks",
 
 //$prueba = '{
 //  "payload": {
