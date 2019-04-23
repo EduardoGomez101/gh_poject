@@ -79,29 +79,55 @@ if ($method == "POST"){
 //echo json_encode($response);
 
 
+$prueba = '{
+    "data":{
+        "google":{
+            "expectUserResponse":true,
+            "noInputPrompts":[
+
+            ],
+            "richResponse":{
+                "items":[
+                    {
+                        "simpleResponse":{
+                            "textToSpeech":"Welcome to this Basic Card",
+                            "displayText":"Welcome to this Basic Card"
+                        }
+                    },
+                    {
+                        "basicCard":{
+                            "buttons":[
+                                {
+                                    "title":"Button Title",
+                                    "openUrlAction":{
+                                        "url":"https://some.url"
+                                    }
+                                }
+                            ],
+                            "formattedText":"Some text",
+                            "image":{
+                                "url":"http://some_image.jpg",
+                                "accessibilityText":"Accessibility text describing the image"
+                            },
+                            "title":"Card Title"
+                        }
+                    }
+                ],
+                "suggestions":[
+                    {
+                        "title":"Aléatoire"
+                    },
+                    {
+                        "title":"Top"
+                    }
+                ]
+            }
+        }
+    }
+}';
 
 
-$prueba = '"messages": [
-  {
-    "buttons": [
-      {
-        "openUrlAction": {
-          "url": "https://linkUrl.com"
-        },
-        "title": "AoG Card Link title"
-      }
-    ],
-    "formattedText": "AoG Card Description",
-    "image": {
-      "url": "http://imageUrl.com"
-      "accessibilityText": "Image description for screen readers"
-    },
-    "platform": "google",
-    "subtitle": "AoG Card Subtitle",
-    "title": "AoG Card Title",
-    "type": "basic_card"
-  }
-]';
+
 $deco = json_decode($prueba);
 echo json_encode($deco);
 
