@@ -87,8 +87,8 @@ $prueba = '{
         "items": [
           {
             "simpleResponse": {
-              "textToSpeech": "This is a basic card example."
-              "displayText": "Esta es la info que deberia salir";
+              "textToSpeech": "This is a basic card example.",
+              "displayText": "Esta es la info que deberia salir"
             }
           },
           {
