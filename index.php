@@ -79,7 +79,9 @@ if ($method == "POST"){
 //echo json_encode($response);
 
 
-$prueba = '{"messages": [
+
+
+$prueba = '"messages": [
   {
     "buttons": [
       {
@@ -99,7 +101,7 @@ $prueba = '{"messages": [
     "title": "AoG Card Title",
     "type": "basic_card"
   }
-]}';
+]';
 $deco = json_decode($prueba);
 echo json_encode($deco);
 
