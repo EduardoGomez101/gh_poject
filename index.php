@@ -62,21 +62,46 @@ if ($method == "POST"){
 	}
 
 //Este ya funciona:
-$buttons = array();
-$buttons["text"] = "Manual de Usuario - E528";
-$buttons["postback"] = "https://inncom.com/images/TechnicalDocs/E528_-Product-Guide_Rev8.0_20MAR17.pdf";
+//$buttons = array();
+//$buttons["text"] = "Manual de Usuario - E528";
+//$buttons["postback"] = "https://inncom.com/images/TechnicalDocs/E528_-Product-Guide_Rev8.0_20MAR17.pdf";
+//
+//$card = array();
+//$card["card"]->title = "E528";
+//$card["card"]->subtitle = "Termostato";
+//$card["card"]->imageUri = "https://sc01.alicdn.com/kf/HTB1f9srKpXXXXXsXXXXq6xXFXXXo/e4-Smart-Digital-Thermostat-E528.jpg_350x350.jpg";
+//$card["card"]->buttons[] = $buttons;
+//
+//$response = new stdClass();
+//$response->fulfillmentText = "This is a text response";
+//$response->fulfillmentMessages[] = $card;
+//$response->source = "example.com";
+//echo json_encode($response);
 
-$card = array();
-$card["card"]->title = "E528";
-$card["card"]->subtitle = "Termostato";
-$card["card"]->imageUri = "https://sc01.alicdn.com/kf/HTB1f9srKpXXXXXsXXXXq6xXFXXXo/e4-Smart-Digital-Thermostat-E528.jpg_350x350.jpg";
-$card["card"]->buttons[] = $buttons;
 
-$response = new stdClass();
-$response->fulfillmentText = "This is a text response";
-$response->fulfillmentMessages[] = $card;
-$response->source = "example.com";
-echo json_encode($response);
+$prueba = '{"messages": [
+  {
+    "buttons": [
+      {
+        "openUrlAction": {
+          "url": "https://linkUrl.com"
+        },
+        "title": "AoG Card Link title"
+      }
+    ],
+    "formattedText": "AoG Card Description",
+    "image": {
+      "url": "http://imageUrl.com"
+      "accessibilityText": "Image description for screen readers"
+    },
+    "platform": "google",
+    "subtitle": "AoG Card Subtitle",
+    "title": "AoG Card Title",
+    "type": "basic_card"
+  }
+]';
+$deco = json_decode($prueba);
+echo json_encode($deco);
 
 //******************* EL QUE FUNCIONA BIEN ES EL SIGUIENTE:
 
