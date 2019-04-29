@@ -50,9 +50,9 @@ if ($method == "POST"){
   }';
 
 
-  
+
 	$deco = json_decode($prueba);
-	echo json_encode($json);
+	echo json_encode($deco);
 
 }
 else{ echo "Method not allowed"; }
