@@ -51,9 +51,9 @@ if ($method == "POST"){
       }
     }';
   } else{
-    if ($Contrasenia == 12345 && strtolower($PersonalAutorizado) == "eduardo gomez"){
+    if ($Contrasenia == 12345 && $PersonalAutorizado == "eduardo gomez"){
       $prueba = '{
-        "fulfillmentText": "Bienvenid@ Srita./Sr. '.$PersonalAutorizado.', cuál es su duda en específico?",
+        "fulfillmentText": "Buen día Sr. '.$json->queryResult->parameters->PersonalAutorizado.', cuál es su duda en específico?",
         "payload": {
           "google": {
             "expectUserResponse": true,
@@ -61,7 +61,7 @@ if ($method == "POST"){
               "items": [
                 {
                   "simpleResponse": {
-                    "textToSpeech": "Bienvenid@ Srita./Sr. '.$PersonalAutorizado.', cuál es su duda en específico?"
+                    "textToSpeech": "Buen día Sr. '.$json->queryResult->parameters->PersonalAutorizado.', cuál es su duda en específico?"
                   }
                 },
                 {
