@@ -7,14 +7,14 @@ if ($method == "POST"){
 	$requestBody = file_get_contents('php://input');
 	$json = json_decode($requestBody);
 
-	//$acciones = strtolower($json->queryResult->parameters->acciones);
+	$acciones = strtolower($json->queryResult->parameters->acciones);
 	//$termostatos = strtolower($json->queryResult->parameters->termostatos);
   $Contrasenia = strtolower($json->queryResult->parameters->Contrasenia);
   $PersonalAutorizado = strtolower($json->queryResult->parameters->PersonalAutorizado);
 
   if ($Contrasenia == "" && $PersonalAutorizado == ""){
     $prueba = '{
-      "fulfillmentText": "Bienvenid@ a la Inteligencia Artificial de Hospitality Solutions para México y LATAM.",
+      "fulfillmentText": ' & $acciones & '"Bienvenid@ a la Inteligencia Artificial de Hospitality Solutions para México y LATAM.",
       "payload": {
         "google": {
           "expectUserResponse": true,
@@ -27,12 +27,12 @@ if ($method == "POST"){
               },
               {
                 "basicCard": {
-                  "title": "IA - Hospitality Solutions",
+                  "title": "Hospitality Solutions - IA",
                   "subtitle": "México y LATAM",
                   "formattedText": "",
                   "image": {
                     "url": "https://www.innspire.com/wp-content/uploads/2014/10/Inncom-1.png",
-                    "accessibilityText": "IA - Hospitality Solutions"
+                    "accessibilityText": "Hospitality Solutions - IA"
                   },
                   "buttons": [
                     {
@@ -53,7 +53,7 @@ if ($method == "POST"){
   } else{
     if ($Contrasenia == 12345 && strtolower($PersonalAutorizado) == "eduardo gomez"){
       $prueba = '{
-        "fulfillmentText": "Para acceder al service mode de un Termostato E528, siga los siguientes pasos:\n1. Presione y mantenga presionado el botón °F/°C\n2. Presione el botón DISPLAY\n3. Presione el botón OFF/AUTO\n4. Libere el botón °F/°C",
+        "fulfillmentText": "Bienvenid@ Srita./Sr. ' & $PersonalAutorizado & ', cuál es su duda en específico?",
         "payload": {
           "google": {
             "expectUserResponse": true,
@@ -61,23 +61,23 @@ if ($method == "POST"){
               "items": [
                 {
                   "simpleResponse": {
-                    "textToSpeech": "Correcto - Como acceder al Service Mode de un Termostato E528"
+                    "textToSpeech": "Bienvenid@ Srita./Sr. ' & $PersonalAutorizado & ', cuál es su duda en específico?"
                   }
                 },
                 {
                   "basicCard": {
-                    "title": "E528",
-                    "subtitle": "Termostato",
-                    "formattedText": "Para acceder al service mode de un **Termostato E528**, siga los siguientes pasos:\n1. Presione y mantenga presionado el botón __°F/°C__\n2. Presione el botón __DISPLAY__\n3. Presione el botón __OFF/AUTO__\n4. Libere el botón __°F/°C__",
+                    "title": "Bienvenid@",
+                    "subtitle": "Hospitality Solutions - IA",
+                    "formattedText": "Cuál es su duda en específico?",
                     "image": {
-                      "url": "https://sc01.alicdn.com/kf/HTB1f9srKpXXXXXsXXXXq6xXFXXXo/e4-Smart-Digital-Thermostat-E528.jpg_350x350.jpg",
+                      "url": "",
                       "accessibilityText": "Termostato E528"
                     },
                     "buttons": [
                       {
-                        "title": "Descargar",
+                        "title": "",
                         "openUrlAction": {
-                          "url": "https://inncom.com/images/TechnicalDocs/E528_-Product-Guide_Rev8.0_20MAR17.pdf"
+                          "url": ""
                         }
                       }
                     ],
