@@ -9,10 +9,10 @@ if ($method == "POST"){
 
 	//$acciones = strtolower($json->queryResult->parameters->acciones);
 	//$termostatos = strtolower($json->queryResult->parameters->termostatos);
-  $contrasenia = strtolower($json->queryResult->parameters->contrasenia);
+  $Contrasenia = strtolower($json->queryResult->parameters->Contrasenia);
   $PersonalAutorizado = strtolower($json->queryResult->parameters->PersonalAutorizado);
 
-  if ("contrasenia" == "" && "PersonalAutorizado" == ""){
+  if ($Contrasenia == "" && $PersonalAutorizado == ""){
     $prueba = '{
       "fulfillmentText": "Bienvenid@ a la Inteligencia Artificial de Hospitality Solutions para México y LATAM.",
       "payload": {
@@ -51,7 +51,7 @@ if ($method == "POST"){
       }
     }';
   } else{
-    if ($contrasenia == 12345 && strtolower($PersonalAutorizado) == "eduardo gomez"){
+    if ($Contrasenia == 12345 && strtolower($PersonalAutorizado) == "eduardo gomez"){
       $prueba = '{
         "fulfillmentText": "Para acceder al service mode de un Termostato E528, siga los siguientes pasos:\n1. Presione y mantenga presionado el botón °F/°C\n2. Presione el botón DISPLAY\n3. Presione el botón OFF/AUTO\n4. Libere el botón °F/°C",
         "payload": {
