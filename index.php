@@ -7,7 +7,7 @@ if ($method == "POST"){
 	$requestBody = file_get_contents('php://input');
 	$json = json_decode($requestBody);
 
-	$acciones = strtolower($json->queryResult->parameters->acciones);
+	//$acciones = strtolower($json->queryResult->parameters->acciones);
 	//$termostatos = strtolower($json->queryResult->parameters->termostatos);
   $Contrasenia = strtolower($json->queryResult->parameters->Contrasenia);
   $PersonalAutorizado = strtolower($json->queryResult->parameters->PersonalAutorizado);
