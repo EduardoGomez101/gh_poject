@@ -14,7 +14,7 @@ if ($method == "POST"){
 
   if ($Contrasenia == "" && $PersonalAutorizado == ""){
     $prueba = '{
-      "fulfillmentText": ' & $acciones & '"Bienvenid@ a la Inteligencia Artificial de Hospitality Solutions para México y LATAM.",
+      "fulfillmentText": "Bienvenid@ a la Inteligencia Artificial de Hospitality Solutions para México y LATAM.",
       "payload": {
         "google": {
           "expectUserResponse": true,
