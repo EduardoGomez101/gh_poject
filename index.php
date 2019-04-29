@@ -66,9 +66,9 @@ if ($method == "POST"){
                 },
                 {
                   "basicCard": {
-                    "title": "Bienvenid@",
+                    "title": "",
                     "subtitle": "Hospitality Solutions - IA",
-                    "formattedText": "Cuál es su duda en específico?",
+                    "formattedText": "",
                     "image": {
                       "url": "",
                       "accessibilityText": "Termostato E528"
