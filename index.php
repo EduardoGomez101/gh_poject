@@ -34,7 +34,7 @@ if ($method == "POST"){
     case "apagar":
       switch($Objeto){
         case "television": $mensajeRespuesta = "Por supuesto, television apagada."; break;
-        case "luz de baño": $mensajeRespuesta = "Apagando luz de baño. Si detecto presencia, encendere nuevamente ésta luz."; break;
+        case "luz de baño": $mensajeRespuesta = "Apagando luz de baño. Si detecto presencia, encenderé nuevamente ésta luz."; break;
         case "todo": $mensajeRespuesta = "Muy bien! Apagando toda la habitación."; break;
       }
     break;
@@ -42,7 +42,7 @@ if ($method == "POST"){
       switch($Objeto){
         case "television": $mensajeRespuesta = "Claro! Encendiendo la televisión."; break;
         case "luz principal": $mensajeRespuesta = "Muy bien, luz principal encendida."; break;
-        case "luz del baño": $mensajeRespuesta = "Encendiendo luz de baño."; break;
+        case "luz de baño": $mensajeRespuesta = "Encendiendo luz de baño."; break;
       }
     break;
     case "escena":
