@@ -8,14 +8,14 @@ if ($method == "POST"){
 	$json = json_decode($requestBody);
 
   //Listado de variables a emplear
-  $Accion = "";
-  $Variable = "";
+  $Accion = "Uno";
+  $Variable = "Dos";
   
 //  if (isset($json->queryResult->parameters->Accion)) $Accion = strtolower($json->queryResult->parameters->Accion);
 //  if (isset($json->queryResult->parameters->Variable)) $Variable = strtolower($json->queryResult->parameters->Variable);
 
-  if ($json->queryResult->parameters->Accion) $Accion = strtolower($json->queryResult->parameters->Accion);
-  if ($json->queryResult->parameters->Variable) $Variable = strtolower($json->queryResult->parameters->Variable);
+  //if ($json->queryResult->parameters->Accion) $Accion = strtolower($json->queryResult->parameters->Accion);
+  //if ($json->queryResult->parameters->Variable) $Variable = strtolower($json->queryResult->parameters->Variable);
 
   $prueba = '{
             "fulfillmentText": "Variable:'.$json->queryResult->parameters->Variable.', Accion:'.$json->queryResult->parameters->Accion.',
