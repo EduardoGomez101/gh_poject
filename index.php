@@ -10,21 +10,44 @@ if ($method == "POST"){
   //Listado de variables a emplear
   $Accion = "";
   $Variable = "";
+  $Objeto = "";
+  $Escena = "";
   $number = "";
 
   $mensajeRespuesta = "";
   
   if (isset($json->queryResult->parameters->Accion)) $Accion = strtolower($json->queryResult->parameters->Accion);
   if (isset($json->queryResult->parameters->Variable)) $Variable = strtolower($json->queryResult->parameters->Variable);
+  if (isset($json->queryResult->parameters->Objeto)) $Objeto = strtolower($json->queryResult->parameters->Objeto);
+  if (isset($json->queryResult->parameters->Escena)) $Escena = strtolower($json->queryResult->parameters->Escena);
   $number = $json->queryResult->parameters->number;
 
-  if ($Accion == "subir"){
-    if ($Variable == "cortinas" || $Variable == "persianas" || $Variable == "cortina" || $Variable == "persiana"){
-
-    }
-    if ($Variable == "temperatura"){
-      $mensajeRespuesta = "Muy bien! Subiendo temperatura a ".$number."grados";
-    }
+  switch ($Accion){
+    case "subir":
+      if ($Objeto == "cortinas" || $Objeto == "persianas"){
+        $mensajeRespuesta = "Perfecto, estoy abriendo las ".$Objeto;
+      }
+      if ($Variable == "temperatura"){
+        $mensajeRespuesta = "Muy bien! Subiendo temperatura a ".$number." grados";
+      }
+    break;
+    case "apagar":
+      switch($Objeto){
+        case "television": $mensajeRespuesta = "Por supuesto, television apagada."; break;
+        case "luz de baño": $mensajeRespuesta = "Apagando luz de baño. Si detecto presencia, encendere nuevamente ésta luz."; break;
+        case "todo": $mensajeRespuesta = "Muy bien! Apagando toda la habitación."; break;
+      }
+    break;
+    case "prender":
+      switch($Objeto){
+        case "television": $mensajeRespuesta = "Claro! Encendiendo la televisión."; break;
+        case "luz principal": $mensajeRespuesta = "Muy bien, luz principal encendida."; break;
+        case "luz del baño": $mensajeRespuesta = "Encendiendo luz de baño."; break;
+      }
+    break;
+    case "escena":
+      if ($Escena == "dormir") $mensajeRespuesta = "Muy bien, definiendo escena para que puedas dormir tranquilamente. Que descanses. Buenas noches.";
+    break;
   }
 
   $prueba = '{
