@@ -11,11 +11,14 @@ if ($method == "POST"){
   $Accion = "";
   $Variable = "";
   
-  if (isset($json->queryResult->parameters->Accion)) $Accion = strtolower($json->queryResult->parameters->Accion);
-  if (isset($json->queryResult->parameters->Variable)) $Variable = strtolower($json->queryResult->parameters->Variable);
+//  if (isset($json->queryResult->parameters->Accion)) $Accion = strtolower($json->queryResult->parameters->Accion);
+//  if (isset($json->queryResult->parameters->Variable)) $Variable = strtolower($json->queryResult->parameters->Variable);
+
+  if ($json->queryResult->parameters->Accion) $Accion = strtolower($json->queryResult->parameters->Accion);
+  if ($json->queryResult->parameters->Variable) $Variable = strtolower($json->queryResult->parameters->Variable);
 
   $prueba = '{
-            "fulfillmentText": "Variable:'.$json->queryResult->parameters->Variable.', Accion:'.$json->queryResult->parameters->Variable.',
+            "fulfillmentText": "Variable:'.$json->queryResult->parameters->Variable.', Accion:'.$json->queryResult->parameters->Accion.',
             "payload": {
               "google": {
                 "expectUserResponse": true,
@@ -23,7 +26,7 @@ if ($method == "POST"){
                   "items": [
                     {
                       "simpleResponse": {
-                        "textToSpeech": "Variable:'.$json->queryResult->parameters->Variable.', Accion:'.$json->queryResult->parameters->Variable.'
+                        "textToSpeech": "Variable:'.$json->queryResult->parameters->Variable.', Accion:'.$json->queryResult->parameters->Accion.'
                       }
                     },
                     {
