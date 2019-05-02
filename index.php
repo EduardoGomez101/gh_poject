@@ -10,9 +10,11 @@ if ($method == "POST"){
   //Listado de variables a emplear
   $Accion = "";
   $Variable = "";
+  $number = "";
   
   if (isset($json->queryResult->parameters->Accion)) $Accion = strtolower($json->queryResult->parameters->Accion);
   if (isset($json->queryResult->parameters->Variable)) $Variable = strtolower($json->queryResult->parameters->Variable);
+  $number = $json->queryResult->parameters->number;
 
   //if ($json->queryResult->parameters->Accion) $Accion = strtolower($json->queryResult->parameters->Accion);
   //if ($json->queryResult->parameters->Variable) $Variable = strtolower($json->queryResult->parameters->Variable);
