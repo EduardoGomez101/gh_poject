@@ -11,16 +11,24 @@ if ($method == "POST"){
   $Accion = "";
   $Variable = "";
   $number = "";
+
+  $mensajeRespuesta = "";
   
   if (isset($json->queryResult->parameters->Accion)) $Accion = strtolower($json->queryResult->parameters->Accion);
   if (isset($json->queryResult->parameters->Variable)) $Variable = strtolower($json->queryResult->parameters->Variable);
   $number = $json->queryResult->parameters->number;
 
-  //if ($json->queryResult->parameters->Accion) $Accion = strtolower($json->queryResult->parameters->Accion);
-  //if ($json->queryResult->parameters->Variable) $Variable = strtolower($json->queryResult->parameters->Variable);
+  if ($Accion == "subir"){
+    if ($Variable == "cortinas" || $Variable == "persianas" || $Variable == "cortina" || $Variable == "persiana"){
+
+    }
+    if ($Variable == "temperatura"){
+      $mensajeRespuesta = "Muy bien! Subiendo temperatura a ".$number."grados";
+    }
+  }
 
   $prueba = '{
-            "fulfillmentText": "Variable:'.$json->queryResult->parameters->Variable.', Accion:'.$json->queryResult->parameters->Accion.'",
+            "fulfillmentText": "'.$mensajeRespuesta.'",
             "payload": {
               "google": {
                 "expectUserResponse": true,
@@ -28,7 +36,7 @@ if ($method == "POST"){
                   "items": [
                     {
                       "simpleResponse": {
-                        "textToSpeech": "Variable:'.$json->queryResult->parameters->Variable.', Accion:'.$json->queryResult->parameters->Accion.'"
+                        "textToSpeech": "'.$mensajeRespuesta.'"
                       }
                     },
                     {
