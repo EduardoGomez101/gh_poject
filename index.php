@@ -61,7 +61,7 @@ if ($method == "POST"){
     case "persianas en modo de ahorro de energia":
       $mensajeRespuesta = "Muchas gracias! Con tu ayuda, podemos ahorrar energía y con ello ayudar al planeta!. Activando modo de ahorro de energía.";
     break;
-    case "ahorro de energia":
+    case "desactivar ahorro de energia":
       $mensajeRespuesta = "Por supuesto! Desactivando modo de ahorro de energía.";
     break;
     case "encendido especial":
