@@ -75,7 +75,7 @@ if ($method == "POST"){
         case "zona de vestidor": $mensajeRespuesta = "Encendiendo luces de la zona de vestidor."; break;
         case "zona de escritorio": $mensajeRespuesta = "Encendiendo luces del escritorio."; break;
         case "todo": $mensajeRespuesta = "Claro que si! Encendiendo todas las luces."; break;
-        case "luz de cama": $mensajeRespuesta = "Tal como lo pidas. Encendiendo la luz de cama a un ".$number." porciento."; break;
+        case "luz de cama": $mensajeRespuesta = "Tal como lo pidas. Encendiendo la luz de cama."; break;
         case "luces de forma calida": $mensajeRespuesta = "Muy bien! Ajustando iluminación en modo: Cálido."; break;
       }
     break;
