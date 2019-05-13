@@ -49,7 +49,7 @@ if ($method == "POST"){
       }
       if ($Variable == "temperatura"){
         $mensajeRespuesta = "Muy bien! Subiendo temperatura a ".$number." grados";
-        $mensajeComando = "FA00E3";
+        $mensajeComando = "FFFF00160000000000000000FFFFFF9300000000074242494E434F00FFA3000200000000000000000065FF83000E000000000000000000650000000000003F02BC000000FF83000E000000000000000000650000000000003F02BC000000FF83000E000000000000000000650000000000003F02BC000000";
       }
     break;
     case "bajar":
@@ -102,7 +102,7 @@ if ($method == "POST"){
             "fulfillmentMessages": [],
             "outputContexts": [
               {
-                "name": "ComandoFastpack",
+                "name": "projects/${PROJECTID}/agent/sessions/${SESSIONID}/contexts/actions_intent_option",
                 "parameters": {
                   "OPTION": "'.$mensajeComando.'"
                 }
