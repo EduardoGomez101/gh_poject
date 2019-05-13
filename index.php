@@ -99,6 +99,15 @@ if ($method == "POST"){
 
   $prueba = '{
             "fulfillmentText": "'.$mensajeRespuesta.'",
+            "fulfillmentMessages": [],
+            "outputContexts": [
+              {
+                "name": "projects/${PROJECTID}/agent/sessions/${SESSIONID}/contexts/actions_intent_option",
+                "parameters": {
+                  "OPTION": "key of selected item"
+                }
+              }
+            ],
             "payload": {
               "google": {
                 "expectUserResponse": true,
