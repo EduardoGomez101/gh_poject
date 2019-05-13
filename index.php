@@ -22,6 +22,7 @@ if ($method == "POST"){
   $number = "";
 
   $mensajeRespuesta = "";
+  $mensajeComando = "";
   
   if (isset($json->queryResult->parameters->Accion)) $Accion = strtolower($json->queryResult->parameters->Accion);
   if (isset($json->queryResult->parameters->Variable)) $Variable = strtolower($json->queryResult->parameters->Variable);
@@ -48,6 +49,7 @@ if ($method == "POST"){
       }
       if ($Variable == "temperatura"){
         $mensajeRespuesta = "Muy bien! Subiendo temperatura a ".$number." grados";
+        $mensajeComando = "FA00E3";
       }
     break;
     case "bajar":
@@ -97,6 +99,7 @@ if ($method == "POST"){
 
   $prueba = '{
             "fulfillmentText": "'.$mensajeRespuesta.'",
+            "fulfillmentDisplayText": "'.$mensajeComando.'",
             "payload": {
               "google": {
                 "expectUserResponse": true,
