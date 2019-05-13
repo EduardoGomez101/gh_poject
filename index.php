@@ -102,7 +102,7 @@ if ($method == "POST"){
             "fulfillmentMessages": [],
             "outputContexts": [
               {
-                "name": "projects/${PROJECTID}/agent/sessions/${SESSIONID}/contexts/actions_intent_option",
+                "name": "ComandoFastpack",
                 "parameters": {
                   "OPTION": "'.$mensajeComando.'"
                 }
