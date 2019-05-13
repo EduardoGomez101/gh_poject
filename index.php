@@ -99,14 +99,14 @@ if ($method == "POST"){
 
   $prueba = '{
             "fulfillment": {
-      "speech": "Text defined in Dialogflow console for the intent that was matched",
-      "messages": [
-        {
-          "type": 0,
-          "speech": "Text defined in Dialogflow console for the intent that was matched"
-        }
-      ]
-    },
+              "speech": "Text defined in Dialogflow console for the intent that was matched",
+              "messages": [
+                {
+                  "type": 0,
+                  "speech": "Text defined in Dialogflow console for the intent that was matched"
+                }
+              ]
+            },
             "payload": {
               "google": {
                 "expectUserResponse": true,
