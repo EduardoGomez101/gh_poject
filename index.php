@@ -104,7 +104,7 @@ if ($method == "POST"){
               {
                 "name": "projects/${PROJECTID}/agent/sessions/${SESSIONID}/contexts/actions_intent_option",
                 "parameters": {
-                  "OPTION": "'.$mensajeComando.'"'
+                  "OPTION": "'.$mensajeComando.'"
                 }
               }
             ],
