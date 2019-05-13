@@ -99,7 +99,13 @@ if ($method == "POST"){
 
   $prueba = '{
             "fulfillmentText": "'.$mensajeRespuesta.'",
-            "fulfillmentDisplayText": "'.$mensajeComando.'",
+            "fulfillmentMessages": [
+              {
+                "text": [
+                  "'.$mensajeComando.'"
+                ],
+              }
+            ],
             "payload": {
               "google": {
                 "expectUserResponse": true,
